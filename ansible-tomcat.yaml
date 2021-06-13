@@ -1,0 +1,10 @@
+---
+- hosts: localhost
+  become: yes
+  tasks:
+          
+          - name: Copying war file
+            command: cp /var/tmp/workspace/Ansible_pipeline/ansible_package_phase/target/addressbook-2.0.war /usr/local/latest/webapps/
+          - name: Starting Tomcat
+            command: sh /usr/local/latest/bin/startup.sh
+            become: yes
