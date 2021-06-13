@@ -4,7 +4,7 @@
   tasks:
           
           - name: Copying war file
-            command: cp /var/lib/jenkins/workspace/ansible_playbook/package/target/addressbook-2.0.war /usr/local/latest/webapps/
+            command: cp /var/lib/jenkins/workspace/ansible_pipeline/package_phase/target/addressbook-2.0.war /usr/local/latest/webapps/
           - name: Starting Tomcat
             command: sh /usr/local/latest/bin/startup.sh
             become: yes
